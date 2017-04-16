@@ -1,0 +1,19 @@
+{
+  "name": "openmtviz",
+  "version": "0.0.1",
+  "description": "Translation visualization for OpenNMT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^2.1.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
