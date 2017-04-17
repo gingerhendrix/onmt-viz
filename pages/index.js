@@ -1,7 +1,6 @@
 import { initStore } from '../store';
 import withRedux from 'next-redux-wrapper';
-import Search from '../components/Search';
-import Results from '../components/Results';
+import { Search, Results } from 'translator';
 
 const Index = () => (
   <div>

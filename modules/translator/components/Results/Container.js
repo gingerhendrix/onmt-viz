@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Component from './Component';
-import { getSourceTokens, getTargetTokens, getAttention } from '../../store.js';
+import { getSourceTokens, getTargetTokens, getAttention } from '../../ducks';
 
 const mapStateToProps = (state) => ({
   src: getSourceTokens(state),

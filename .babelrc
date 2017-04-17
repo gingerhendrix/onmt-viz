@@ -1,0 +1,8 @@
+{
+  plugins: [
+    ["module-resolver", {
+      "root": ["./lib", "./modules"],
+    }],
+  ],
+  presets: ["next/babel"],
+}
