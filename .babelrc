@@ -1,8 +1,8 @@
 {
   plugins: [
     ["module-resolver", {
-      "root": ["./lib", "./modules"],
+      "root": ["./src/lib", "./src/modules"],
     }],
   ],
-  presets: ["next/babel"],
+  presets: ['react-app']
 }

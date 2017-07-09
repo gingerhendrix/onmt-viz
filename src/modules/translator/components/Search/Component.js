@@ -1,3 +1,4 @@
+import React from 'react';
 
 const Search = ({ value, onChange, onSubmit }) =>(
   <div style={{overflow: 'hidden'}}>

@@ -1,3 +1,4 @@
+import React from 'react';
 import Attention from './Attention'
 
 const Results = ({ src, tgt, attn }) => {

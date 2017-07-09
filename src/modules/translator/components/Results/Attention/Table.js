@@ -1,6 +1,7 @@
+import React from 'react';
 
 const ColHeader = ({ word }) =>
-  <td style={{ padding: '10px 10px' }} >{word}</td>
+  <td style={{ padding: '10px 10px' }} ><span style={{ transform: 'rotate(90)' }} >{word}</span></td>
 
 const RowHeader = ({ word }) =>
   <td>{word}</td>
