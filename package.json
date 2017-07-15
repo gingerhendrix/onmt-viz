@@ -1,6 +1,6 @@
 {
   "name": "onmt-viz",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Translation visualization for OpenNMT",
   "main": "index.js",
   "scripts": {
