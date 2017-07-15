@@ -44,6 +44,7 @@
     "postcss-loader": "2.0.6",
     "promise": "7.1.1",
     "react": "^15.5.4",
+    "react-d3-tree": "https://github.com/bkrem/react-d3-tree",
     "react-dev-utils": "^3.0.2",
     "react-dom": "^15.5.4",
     "react-error-overlay": "^1.0.9",

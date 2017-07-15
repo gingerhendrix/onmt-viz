@@ -1,7 +1,7 @@
 import { translationUrl } from '../../../config';
 
 const UPDATE_SOURCE_TEXT = 'UPDATE_SOURCE_TEXT';
-const RECEIVE_TRANSLATION_RESULTS = 'RECEIVE_TRANSLATION_RESULTS';
+export const RECEIVE_TRANSLATION_RESULTS = 'RECEIVE_TRANSLATION_RESULTS';
 
 const initialState = {
   sourceText: 'Je mange les frites',
@@ -22,15 +22,16 @@ export const reducer = (state = initialState, action) => {
   }
 }
 
-export const getSourceText = (state) => state.sourceText
+const getState = ({ translator }) => translator;
+export const getSourceText = (state) => getState(state).sourceText
 
-export const getSourceTokens = (state) => state.sourceTokens
+export const getSourceTokens = (state) => getState(state).sourceTokens
 
-export const getTargetText = (state) => state.targetText
+export const getTargetText = (state) => getState(state).targetText
 
-export const getTargetTokens = (state) => state.targetTokens
+export const getTargetTokens = (state) => getState(state).targetTokens
 
-export const getAttention = (state) =>  state.attention
+export const getAttention = (state) =>  getState(state).attention
 
 export const updateSourceText = (value) => ({
   type: UPDATE_SOURCE_TEXT,
