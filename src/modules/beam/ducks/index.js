@@ -1,5 +1,5 @@
-import { translationUrl } from '../../../config';
-import { RECEIVE_TRANSLATION_RESULTS } from '../../translator/ducks';
+import { FETCH_TRANSLATION_RESULTS, RECEIVE_TRANSLATION_RESULTS } from '../../translator/ducks';
+import { createSelector } from 'reselect';
 
 const initialState = {
   beamSearch: undefined,
@@ -7,6 +7,10 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_TRANSLATION_RESULTS: return {
+      ...state,
+      beamSearch: undefined,
+    }
     case RECEIVE_TRANSLATION_RESULTS: return {
       ...state,
       beamSearch: action.results.beamSearch,
@@ -48,8 +52,15 @@ const toTree = ({ predictedIds, parentIds, scores }) => {
   return [root];
 };
 
-// const getState = ({ beam }) => beam;
-export const getBeamTree = ({ beam: { beamSearch }}) => toTree(normalizeData(beamSearch))
+const getState = ({ beam }) => beam;
+const getBeamSearch = (state) => getState(state).beamSearch
 
+export const getBeamTree = createSelector(
+  getBeamSearch,
+  (beamSearch) => {
+    if (!beamSearch) return null;
+    return toTree(normalizeData(beamSearch))
+  }
+);
 
 export default reducer;

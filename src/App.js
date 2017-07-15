@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Search, Results } from 'translator';
+import { Box, Divider } from 'rebass';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <Box p={3} >
         <Search />
-        <hr />
+        <Divider />
         <Results />
-      </div>
+      </Box>
     );
   }
 }
