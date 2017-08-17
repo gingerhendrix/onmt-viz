@@ -19,8 +19,8 @@ export const reducer = (state = initialState, action) => {
     case RECEIVE_TRANSLATION_RESULTS: return {
       ...state,
       targetText: action.results.tgt,
-      targetTokens: action.results.tgt.split(' '), //action.results.tgtTokens.words,
-      sourceTokens: action.results.src.split(' '), //action.results.srcTokens.words,
+      targetTokens: action.results.tgtTokens ? action.results.tgtTokens.words : action.results.tgt.split(' '),
+      sourceTokens: action.results.srcTokens ? action.results.srcTokens.words : action.results.src.split(' '),
       attention: action.results.attn,
     }
     case TOGGLE_ATTENTION: return {
